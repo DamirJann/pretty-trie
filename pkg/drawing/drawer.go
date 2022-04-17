@@ -1,14 +1,14 @@
-package pkg
+package drawing
 
 import (
 	"bytes"
 	"fmt"
-	"pretty-trie/pkg/entity"
+	"github.com/DamirJann/pretty-trie/pkg/entity"
 )
 
-func Draw(node []entity.Node, edge []entity.Edge) (string, error) {
-
+func Visualize(node []entity.Node, edge []entity.Edge) (string, error) {
 	var res bytes.Buffer
+	res.WriteString(node[0].Label + "\n")
 	dfs(&res, node[0], node, edge, 0, []bool{})
 	return res.String(), nil
 }
@@ -51,7 +51,7 @@ func dfs(out *bytes.Buffer, currentNode entity.Node, node []entity.Node, edge []
 			}
 		}
 
-		_, _ = fmt.Fprintf(out, "%s───%s", startSymbol, findById(n.To, node))
+		_, _ = fmt.Fprintf(out, "%s───%s", startSymbol, findById(n.To, node).Label)
 
 		_, _ = fmt.Fprintf(out, "\n")
 

@@ -1,9 +1,8 @@
 package entity
 
 type Node struct {
-	Id       int    `json:"id"`
-	Label    string `json:"label"`
-	ChildIds []int  `json:"child_ids"`
+	Id    int    `json:"id"`
+	Label string `json:"label"`
 }
 
 type Edge struct {
