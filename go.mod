@@ -1,1 +1,1 @@
-module pretty-trie
+module github.com/DamirJann/pretty-trie
