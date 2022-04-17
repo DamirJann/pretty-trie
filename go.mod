@@ -1,1 +1,1 @@
-module pretty_trie
+module pretty-trie

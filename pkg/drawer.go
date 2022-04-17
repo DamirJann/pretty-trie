@@ -3,10 +3,10 @@ package pkg
 import (
 	"bytes"
 	"fmt"
-	"pretty_trie/pkg/entity"
+	"pretty-trie/pkg/entity"
 )
 
-func draw(node []entity.Node, edge []entity.Edge) (string, error) {
+func Draw(node []entity.Node, edge []entity.Edge) (string, error) {
 
 	var res bytes.Buffer
 	dfs(&res, node[0], node, edge, 0, []bool{})
